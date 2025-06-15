@@ -9,20 +9,20 @@
   <!-- 导航栏 -->
   <nav class="navbar">
     <span class="navbar-name">Linling Xie</span>
-    <a href="#self-intro">Self-Introduction</a>
+    <a href="#self-intro">Home</a>
     <a href="#awards">Awards</a>
-    <a href="#activities">Extracurricular Activities</a>
-    <a href="#drama">Drama Performance</a>
+    <a href="#activities">Women for Math </a>
+    <a href="#drama">Chinese Drama Performance</a>
     <a href="#math">Math Competition</a>
     <a href="#research">Research Experience</a>
-    <a href="#innovation">Innovation Competition</a>
+    <a href="#innovation">Robotic Innovation </a>
   </nav>
 
   <!-- 自我介绍视频 -->
   <section id="self-intro" class="section">
-    <h1>Self-Introduction</h1>
+    <h1>Home</h1>
     <div class="video-container">
-      <iframe width="800" height="450" src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+      <iframe width="800" height="450" src="https://www.youtube.com/embed/TD04QAAGYyM"
         title="YouTube video player" frameborder="0" allowfullscreen></iframe>
     </div>
   </section>
@@ -90,7 +90,7 @@
 
   <!-- Extracurricular Activities -->
   <section id="activities" class="section">
-    <h1>Extracurricular Activities</h1>
+    <h1>Women for Math</h1>
     <div class="grid" id="activities-grid">
       <div class="activity-card" data-index="0">
         <img src="照片整理/学校/4661749259967_.pic.jpg" alt="Women in Math Study Group">
@@ -119,7 +119,7 @@
 
   <!-- Drama Performance -->
   <section id="drama" class="section drama-section">
-    <h1>Drama Performance</h1>
+    <h1>Chinese Drama Performance</h1>
     <div class="drama-content">
       <div class="drama-images">
         <img src="照片整理/戏剧/4371749259321_.pic.jpg" class="main-img" id="drama-main-img" alt="Drama 1">
@@ -181,7 +181,7 @@
 
   <!-- Innovation Competition -->
   <section id="innovation" class="section">
-    <h1>Innovation Competition</h1>
+    <h1>Robotic Innovation</h1>
     <div class="gallery">
       <div class="gallery-item">
         <img src="照片整理/科创比赛/4491749259579_.pic.jpg" alt="Innovation 1">
@@ -298,32 +298,34 @@
   </div>
 
   <script>
-    // 自动滚动
     const carousel = document.getElementById('awards-carousel');
-    let scrollAmount = 0;
-    let autoScroll = setInterval(() => {
+    const track = carousel.querySelector('.carousel-track');
+    const items = track.children;
+    const itemCount = items.length;
+    const itemWidth = items[0].offsetWidth + 32; // 32px gap
+    const visibleCount = Math.floor(carousel.offsetWidth / itemWidth);
+
+    // 克隆前 visibleCount 个 item 到末尾
+    for (let i = 0; i < visibleCount; i++) {
+      track.appendChild(items[i].cloneNode(true));
+    }
+
+    let autoScroll = setInterval(scrollCarousel, 20);
+
+    function scrollCarousel() {
       if (carousel) {
         carousel.scrollLeft += 2;
-        scrollAmount += 2;
-        // 到达末尾后回到开头
-        if (carousel.scrollLeft + carousel.clientWidth >= carousel.scrollWidth - 2) {
+        // 到达"假"结尾时，瞬间跳回真实开头
+        if (carousel.scrollLeft >= itemWidth * itemCount) {
           carousel.scrollLeft = 0;
-          scrollAmount = 0;
         }
       }
-    }, 20);
+    }
 
     // 鼠标悬停时暂停自动滚动
     carousel.addEventListener('mouseenter', () => clearInterval(autoScroll));
     carousel.addEventListener('mouseleave', () => {
-      autoScroll = setInterval(() => {
-        carousel.scrollLeft += 2;
-        scrollAmount += 2;
-        if (carousel.scrollLeft + carousel.clientWidth >= carousel.scrollWidth - 2) {
-          carousel.scrollLeft = 0;
-          scrollAmount = 0;
-        }
-      }, 20);
+      autoScroll = setInterval(scrollCarousel, 20);
     });
 
     document.addEventListener('DOMContentLoaded', function() {

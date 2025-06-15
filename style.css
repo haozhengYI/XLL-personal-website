@@ -23,7 +23,8 @@ body {
   color: #fff;
   font-size: 1.5em;
   font-weight: bold;
-  margin-right: 2.5em;
+  margin-right: 1.5em;
+  margin-left: 2em;
   letter-spacing: 1px;
   pointer-events: none;
   user-select: none;
@@ -53,13 +54,14 @@ body {
   border-radius: 2px;
 }
 .section {
-  min-height: 80vh;
+  min-height: 35vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding-top: 120px; /* for navbar */
+  padding-top: 120px;
+  margin-bottom: 0px;
 }
 h1, h2 {
   font-weight: bold;
