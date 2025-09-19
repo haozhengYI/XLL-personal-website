@@ -453,3 +453,783 @@ h1, h2 {
   .activity-detail-img img { width: 90vw; height: auto; }
   .activity-detail-info { margin-left: 0; }
 }
+/* Women for Math 样式 */
+.women-math-content {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.women-math-images {
+  flex: 1;
+  position: relative;
+}
+
+.image-carousel {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-img.active {
+  opacity: 1;
+}
+
+.carousel-controls {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  pointer-events: none;
+}
+
+.prev-btn, .next-btn {
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  transition: all 0.3s ease;
+  pointer-events: all;
+}
+
+.prev-btn:hover, .next-btn:hover {
+  background: rgba(255, 255, 255, 1);
+  transform: scale(1.1);
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dot.active {
+  background: #fff;
+  transform: scale(1.2);
+}
+
+.women-math-description {
+  flex: 1;
+  padding: 20px;
+}
+
+.women-math-description p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #fff;
+  text-align: justify;
+  margin: 0;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .women-math-content {
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .image-carousel {
+    height: 300px;
+  }
+  
+  .women-math-description p {
+    font-size: 14px;
+  }
+}
+
+/* School Honor Subsection 样式 */
+.school-honor-subsection {
+  margin-top: 60px;
+  padding-top: 40px;
+  border-top: none;
+}
+
+.school-honor-content {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.school-honor-description {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.school-honor-description h3 {
+  font-size: 1.4em;
+  color: #fff;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.school-honor-description p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: #fff;
+  text-align: justify;
+}
+
+.school-honor-images {
+  flex: 1;
+  position: relative;
+}
+
+.honor-carousel {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+}
+
+.honor-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  background: transparent;
+}
+
+.honor-img.active {
+  opacity: 1;
+}
+
+.honor-controls {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  pointer-events: none;
+}
+
+.honor-prev-btn, .honor-next-btn {
+  background: rgba(0, 0, 0, 0.6);
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  pointer-events: all;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.honor-prev-btn:hover, .honor-next-btn:hover {
+  background: rgba(0, 0, 0, 0.8);
+  transform: scale(1.1);
+}
+
+.honor-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.honor-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.honor-dot.active {
+  background: #fff;
+  transform: scale(1.2);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .school-honor-content {
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .school-honor-description {
+    padding-right: 0;
+    text-align: center;
+  }
+  
+  .school-honor-description h3 {
+    font-size: 1.2em;
+  }
+  
+  .school-honor-description p {
+    font-size: 1em;
+  }
+  
+  .honor-carousel {
+    height: 400px;
+  }
+}
+
+/* Drama Performance 样式 */
+.drama-section .drama-content {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.drama-description {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.drama-description p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: #fff;
+  text-align: justify;
+  margin: 0;
+}
+
+.drama-images {
+  flex: 1;
+  position: relative;
+}
+
+.drama-carousel {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #232529; /* 设置深色背景，与页面主题一致 */
+}
+
+.drama-img,
+.drama-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  border-radius: 10px;
+}
+
+/* 第一张图片原比例展示，背景透明 */
+.drama-img:first-child {
+  object-fit: contain;
+  background: transparent;
+}
+
+/* 其他图片和视频保持cover */
+.drama-img:not(:first-child),
+.drama-video {
+  object-fit: cover;
+}
+
+.drama-img.active,
+.drama-video.active {
+  opacity: 1;
+}
+
+.drama-controls {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  pointer-events: none;
+}
+
+.drama-prev-btn,
+.drama-next-btn {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+  pointer-events: auto;
+}
+
+.drama-prev-btn:hover,
+.drama-next-btn:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.drama-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.drama-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.drama-dot.active {
+  background: #3498db;
+}
+
+.drama-dot:hover {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .drama-section .drama-content {
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .drama-description {
+    padding-right: 0;
+    text-align: center;
+  }
+  
+  .drama-description p {
+    font-size: 1em;
+  }
+  
+  .drama-carousel {
+    height: 400px;
+  }
+}
+
+/* Math Competition Modal 样式 */
+.math-modal {
+  display: none;
+  position: fixed;
+  z-index: 3000;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+}
+
+.math-modal-content {
+  background: #fff;
+  color: #222;
+  border-radius: 18px;
+  padding: 0;
+  min-width: 900px;
+  max-width: 90vw;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.3);
+}
+
+.math-modal-body {
+  display: flex;
+  gap: 36px;
+  align-items: flex-start;
+  padding: 48px 48px 40px 48px;
+}
+
+.math-modal-images {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.math-carousel {
+  width: 100%;
+  max-width: 400px;
+}
+
+.math-main-img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 12px;
+  background: #f5f5f5;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.math-thumbnails {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  max-width: 100%;
+  padding: 10px 0;
+  scrollbar-width: thin;
+  scrollbar-color: #ccc #f5f5f5;
+}
+
+.math-thumbnails::-webkit-scrollbar {
+  height: 6px;
+}
+
+.math-thumbnails::-webkit-scrollbar-track {
+  background: #f5f5f5;
+  border-radius: 3px;
+}
+
+.math-thumbnails::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 3px;
+}
+
+.math-thumbnails::-webkit-scrollbar-thumb:hover {
+  background: #999;
+}
+
+.math-thumbnails img {
+  width: 80px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 6px;
+  cursor: pointer;
+  flex-shrink: 0;
+  background: #f5f5f5;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.math-thumbnails img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.math-thumbnails img.active {
+  border: 2px solid #3498db;
+  transform: scale(1.05);
+}
+
+.math-modal-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-size: 1.1em;
+  justify-content: flex-start;
+}
+
+.math-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.math-modal-title {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #2c3e50;
+  margin: 0;
+  flex: 1;
+}
+
+.math-modal-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  margin-left: 20px;
+}
+
+.math-modal-time {
+  font-size: 1.1em;
+  font-weight: 600;
+  color: #3498db;
+  margin-bottom: 5px;
+  padding: 4px 12px;
+  background: #ecf0f1;
+  border-radius: 20px;
+  border-left: 4px solid #3498db;
+}
+
+.math-modal-role {
+  font-size: 0.9em;
+  color: #7f8c8d;
+  font-style: italic;
+  padding: 2px 8px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  border: 1px solid #e9ecef;
+}
+
+.math-modal-desc {
+  line-height: 1.6;
+  color: #555;
+  text-align: justify;
+}
+
+/* 响应式设计 */
+@media (max-width: 1000px) {
+  .math-modal-content {
+    min-width: unset;
+    max-width: 95vw;
+  }
+  
+  .math-modal-body {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .math-main-img {
+    height: 250px;
+  }
+  
+  .math-modal-title {
+    font-size: 1.5em;
+  }
+  
+  .math-modal-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .math-modal-meta {
+    align-items: flex-start;
+    text-align: left;
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}
+
+/* Innovation Project Modal 样式 */
+.innovation-modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.innovation-modal-content {
+  background: #2c3e50;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 1200px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.innovation-modal-body {
+  display: flex;
+  gap: 30px;
+  padding: 30px;
+}
+
+.innovation-modal-images {
+  flex: 1;
+}
+
+.innovation-carousel {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.innovation-main-img,
+.innovation-main-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.innovation-thumbnails {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding: 10px 0;
+}
+
+.thumb-img,
+.thumb-video {
+  width: 80px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 5px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.thumb-img:hover,
+.thumb-video:hover {
+  opacity: 1;
+}
+
+.thumb-img.active,
+.thumb-video.active {
+  opacity: 1;
+  border-color: #3498db;
+}
+
+.innovation-modal-info {
+  flex: 1;
+  color: #fff;
+}
+
+.innovation-modal-header {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.innovation-modal-title {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #fff;
+  flex: 1;
+}
+
+.innovation-modal-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 5px;
+}
+
+.innovation-modal-competition,
+.innovation-modal-role {
+  background: #3498db;
+  color: #fff;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.9em;
+  font-weight: 500;
+}
+
+.innovation-modal-desc {
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: #ecf0f1;
+  text-align: justify;
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  color: #fff;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.close-btn:hover {
+  color: #e74c3c;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .innovation-modal-body {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .innovation-modal-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .innovation-modal-meta {
+    align-items: flex-start;
+  }
+}
+
+/* 为视频缩略图添加活动状态样式 */
+.math-thumbnails video.active {
+  opacity: 1 !important;
+  border-color: #3498db !important;
+}
+
+.math-thumbnails video:hover {
+  opacity: 1 !important;
+}
